@@ -1,0 +1,111 @@
+{
+  "name": "kst-web",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "npm-run-all -p gulp start",
+    "build": "npm-run-all -p gulp bundle",
+    "gulp": "gulp",
+    "bundle": "vue-cli-service build --report --no-clean",
+    "start": "nodemon --watch vue.config.js --exec \"npm run serve --theme=default\"",
+    "serve": "vue-cli-service serve",
+    "build:dev": "vue-cli-service build --mode=development --report",
+    "lint": "vue-cli-service lint",
+    "inspect": "vue-cli-service inspect --mode=production > config.prod.js",
+    "inspect:dev": "vue-cli-service inspect > config.dev.js",
+    "commit": "git add . && git-cz",
+    "push": "npm-run-all commit release",
+    "release": "standard-version && git push"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "gitHooks": {
+    "pre-commit": "npm run lint",
+    "commit-msg": "node scripts/verify-commit.js"
+  },
+  "dependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.5.5",
+    "axios": "^0.19.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-component": "^1.1.1",
+    "babel-preset-es2015": "^7.0.0-beta.3",
+    "core-js": "^2.6.5",
+    "mavon-editor": "^2.7.5",
+    "qs": "^6.7.0",
+    "sass-resources-loader": "^2.0.1",
+    "vue": "^2.6.10",
+    "vue-router": "^3.0.6",
+    "vuex": "^3.1.1",
+    "xterm": "^3.14.5",
+    "xterm-addon-web-links": "^0.1.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "@vue/cli-plugin-babel": "^3.8.0",
+    "@vue/cli-plugin-eslint": "^3.8.0",
+    "@vue/cli-service": "^3.8.0",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-import": "^1.12.2",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "browser-sync": "^2.26.7",
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "^3.0.2",
+    "del": "^5.1.0",
+    "element-ui": "^2.12.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "fs": "0.0.1-security",
+    "git-cz": "^3.3.0",
+    "gulp": "^4.0.2",
+    "husky": "^3.1.0",
+    "kst-util": "^1.0.9",
+    "less": "^3.9.0",
+    "less-loader": "^5.0.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.12.0",
+    "nodemon": "^1.19.1",
+    "npm-run-all": "^4.1.5",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "sass-loader": "^7.1.0",
+    "standard-version": "^7.0.1",
+    "style-loader": "^0.23.1",
+    "terser-webpack-plugin": "^1.4.1",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "view-design": "^4.0.2",
+    "vue-slider-component": "^3.0.32",
+    "vue-template-compiler": "^2.6.10",
+    "webpack-dev-server": "^2.9.7",
+    "yargs": "^15.0.2",
+    "yorkie": "^2.0.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}
