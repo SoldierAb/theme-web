@@ -119,7 +119,7 @@ module.exports = {
       },
     
     },
-    before: app => { },
+    before: () => { },
     watchOptions: {
       poll: true,
       ignored: path.join(__dirname, '/node_modules')

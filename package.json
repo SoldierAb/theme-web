@@ -64,7 +64,6 @@
     "fs": "0.0.1-security",
     "git-cz": "^3.3.0",
     "gulp": "^4.0.2",
-    "husky": "^3.1.0",
     "kst-util": "^1.0.9",
     "less": "^3.9.0",
     "less-loader": "^5.0.0",
