@@ -90,6 +90,9 @@
     "env": {
       "node": true
     },
+    "globals": {
+      "K": "readonly"
+    },
     "extends": [
       "plugin:vue/essential",
       "eslint:recommended"
