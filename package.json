@@ -13,6 +13,7 @@
     "lint": "vue-cli-service lint",
     "inspect": "vue-cli-service inspect --mode=production > config.prod.js",
     "inspect:dev": "vue-cli-service inspect > config.dev.js",
+    "postinstall": "node scripts/post-install || echo \"ignore\"",
     "commit": "git add . && git-cz",
     "push": "npm-run-all commit release",
     "release": "standard-version && git push"
