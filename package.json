@@ -82,7 +82,7 @@
     "view-design": "^4.0.2",
     "vue-slider-component": "^3.0.32",
     "vue-template-compiler": "^2.6.10",
-    "webpack-dev-server": "^2.9.7",
+    "webpack-dev-server": "^3.1.11",
     "yargs": "^15.0.2",
     "yorkie": "^2.0.0"
   },
